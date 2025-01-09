@@ -1,32 +1,32 @@
 import 'package:flutter/material.dart';
-import 'login_page.dart';
+import 'home_page.dart';
 
-class WelcomePage extends StatelessWidget {
-  const WelcomePage({Key? key}) : super(key: key);
+class ConfirmationPage extends StatelessWidget {
+  const ConfirmationPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('EcoSort'),
+        title: const Text('Confirmation'),
       ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             const Text(
-              'Welcome to EcoSort!',
-              style: TextStyle(fontSize: 24),
+              'Account created successfully!',
+              style: TextStyle(fontSize: 20),
             ),
             const SizedBox(height: 20),
             ElevatedButton(
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => const LoginPage()),
+                  MaterialPageRoute(builder: (context) => const HomePage()),
                 );
               },
-              child: const Text('Get Started'),
+              child: const Text('Continue'),
             ),
           ],
         ),
