@@ -81,7 +81,10 @@ class LandingPage extends StatelessWidget {
             ),
             const SizedBox(height: 30),
             ElevatedButton(
-              onPressed: () {},
+              onPressed: () {
+                // Navigate to the Login Page
+                Navigator.pushNamed(context, '/login');
+              },
               style: ElevatedButton.styleFrom(
                 backgroundColor: Colors.brown,
                 padding: const EdgeInsets.symmetric(
@@ -97,6 +100,7 @@ class LandingPage extends StatelessWidget {
                 style: TextStyle(
                   fontSize: 18,
                   color: Colors.white,
+
                 ),
               ),
             ),
