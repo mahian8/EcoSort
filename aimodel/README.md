@@ -6,9 +6,8 @@ This project provides a TensorFlow Lite model (`waste_classifier_model.tflite`) 
 
 ## **Contents**
 - `waste_classifier_model.tflite`: The trained TensorFlow Lite model.
-- `class_labels.json`: A file mapping numerical outputs to waste categories.
-- `requirements.txt`: Python dependencies for local testing (optional).
-- `test_images/`: A folder containing sample test images.
+- `categories.json`: A file mapping numerical outputs to waste categories.
+- `exampleBackend.py`: Backend example for using the AI Model.
 
 ---
 
@@ -31,7 +30,7 @@ input_details = interpreter.get_input_details()
 output_details = interpreter.get_output_details()
 
 # Preprocess the image
-img = Image.open("test_images/plastic_bottle.jpg").resize((224, 224))
+img = Image.open("test_images/plastic_bottle.jpg").resize((224, 224)) #put your own images here to test
 img_array = np.array(img) / 255.0  # Normalize the image
 img_array = np.expand_dims(img_array, axis=0)  # Add batch dimension
 
