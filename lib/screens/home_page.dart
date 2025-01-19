@@ -1,3 +1,4 @@
+import 'package:ecosort/screens/classification_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -90,9 +91,59 @@ class HomeContent extends StatelessWidget {
           SizedBox(height: 16),
           Expanded(
             child: Center(
-              child: Image.network(
-                'https://example.com/home_page_illustration.jpg', // Replace with actual illustration URL
-                height: 200,
+              child: Column(
+                children: [
+                  Container(
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadiusDirectional.circular(30),
+                      color: Colors.white,
+                    ),
+                    height: 170,
+                    width: 300,
+                    padding: EdgeInsetsDirectional.only(start: 15),
+                    child: Column(
+                      children: [
+                        SizedBox(height:15),
+                        Text('Waste Classification',
+                        style: TextStyle(
+                          fontSize: 18,
+                          fontWeight: FontWeight.bold,
+                        ),
+                        ),
+                        SizedBox(height: 15,),
+                        Container(
+                          width: 250,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadiusDirectional.circular(30),
+                            color:Colors.brown,
+                          ),
+                          child: TextButton(onPressed: (){
+                            Navigator.push(context,
+                                MaterialPageRoute(builder: (context)=>
+                                    ClassificationPage()
+                                )
+                            );
+                          },
+                              child: Text('Start Sorting',
+                              style: TextStyle(
+                                fontSize: 18,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.white
+                              ),
+                              )
+                          ),
+                        ),
+                        SizedBox(height: 15,),
+                        Text('Learn how to properly sort your waste and make a positive impact on the environment',
+                            style: TextStyle(
+                              fontSize: 12,
+                            ),
+                        )
+
+                      ],
+                    ),
+                  )
+                ],
               ),
             ),
           ),

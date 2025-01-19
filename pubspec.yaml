@@ -31,6 +31,14 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  camera: ^0.9.4+6
+  image_picker: ^0.8.7+5
+  path_provider: ^2.0.12
+  tensorflow_lite_flutter: ^2.0.1
+  tflite: ^1.1.2
+  http: ^1.2.2
+  tflite_flutter_helper: ^0.3.1
+  tflite_flutter: ^0.9.1
 
 
 
@@ -52,8 +60,10 @@ flutter:
   uses-material-design: true
 
   # To add assets to your application, add an assets section, like this:
-  # assets:
-  #   - images/a_dot_burr.jpeg
+  assets:
+  - Image/
+  - assets/models/waste_classifier_model.tflite
+  - assets/models/categories.json
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

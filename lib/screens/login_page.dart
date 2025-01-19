@@ -24,10 +24,13 @@ class LoginPage extends StatelessWidget {
         width: double.infinity,
         height: double.infinity,
         decoration: BoxDecoration(
-          color: Colors.green[200],
           image: DecorationImage(
-            image: AssetImage("assets/background_pattern.png"), // Replace with your background
+            image: AssetImage("Image/Background.jpg"), // Replace with your background
             fit: BoxFit.cover,
+            colorFilter: ColorFilter.mode(
+              Colors.green.withOpacity(0.7),
+              BlendMode.multiply,
+            ),
           ),
         ),
         child: Column(
